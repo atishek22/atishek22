@@ -50,6 +50,7 @@ Plugin 'morhetz/gruvbox'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'udalov/kotlin-vim'
 "Plugin 'neoclide/coc.nvim'
+Plugin 'preservim/nerdtree'
 call vundle#end()
 
 let g:airline#extensions#tabline#enabled = 1
@@ -68,4 +69,15 @@ hi CursorLine term=bold cterm=bold guibg=Grey40
 colorscheme gruvbox
 set background=dark
 
+"Nerdtree Toggle
+nnoremap <C-n> :NERDTreeToggle<CR>
 
+"Screen split and window nav
+nnoremap <Space> <Nop>
+let mapleader=" "
+nnoremap <leader>b :sp<CR>
+nnoremap <leader>c :vsp<CR>
+nnoremap <leader>l :wincmd l<CR>
+nnoremap <leader>k :wincmd k<CR>
+nnoremap <leader>j :wincmd j<CR>
+nnoremap <leader>h :wincmd h<CR>
